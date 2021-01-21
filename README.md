@@ -1,4 +1,6 @@
 ﻿# AsyncArtifactCreator
+![NuGet badge](https://img.shields.io/nuget/v/AsyncArtifactCreator)
+
 A simple package containing a hosted service that helps its users create an
 asynchronous artifact creation service. The artifacts can be whatever one
 wants, for instance:
