@@ -11,7 +11,7 @@
         <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.1.0</PackageVersion>
         <Description>A simple library containing a hosted service intended asynchronous creating of artifacts (e. g. archives, image processing, complex queries ...)</Description>
         <PackageReleaseNotes>- Move to the Geext namespace
 - Return an object from the GetProgress function containing the ready flag</PackageReleaseNotes>
