@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
@@ -91,19 +91,23 @@ namespace Geext.AsyncArtifactCreator
             _logger?.LogInformation("Added an artifact request with identity {Identity}", GetIdentity(request));
         }
 
-        public double GetProgress(TArtifactIdentity identity)
+        public ProgressInfo GetProgress(TArtifactIdentity identity)
         {
             var isPending = _currentTasks.ContainsKey(identity);
             var isReady = _createdArtifacts.ContainsKey(identity);
             if (!isPending && !isReady)
                 throw new InvalidOperationException("An artifact with the given identity has not been found");
 
+            double progress;
             if (isReady)
-                return 1.0;
+                progress = 1.0;
+            else
+            {
+                if (!_currentProgress.TryGetValue(identity, out progress))
+                    progress = 0.0;
+            }
 
-            return _currentProgress.TryGetValue(identity, out var progress)
-                ? progress
-                : 0.0;
+            return new ProgressInfo(progress, isReady);
         }
 
         public bool IsReady(TArtifactIdentity identity)
