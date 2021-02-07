@@ -13,9 +13,12 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageVersion>1.0.1</PackageVersion>
         <Description>A simple library containing a hosted service intended asynchronous creating of artifacts (e. g. archives, image processing, complex queries ...)</Description>
-        <PackageReleaseNotes>Update license</PackageReleaseNotes>
+        <PackageReleaseNotes>- Move to the Geext namespace
+- Return an object from the GetProgress function containing the ready flag</PackageReleaseNotes>
         <RootNamespace>Geext.AsyncArtifactCreator</RootNamespace>
         <AssemblyName>Geext.AsyncArtifactCreator</AssemblyName>
+        <Company>Denis Karpovskiy</Company>
+        <Version>1.1.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
