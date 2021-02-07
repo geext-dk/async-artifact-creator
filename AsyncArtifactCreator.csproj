@@ -14,6 +14,8 @@
         <PackageVersion>1.0.1</PackageVersion>
         <Description>A simple library containing a hosted service intended asynchronous creating of artifacts (e. g. archives, image processing, complex queries ...)</Description>
         <PackageReleaseNotes>Update license</PackageReleaseNotes>
+        <RootNamespace>Geext.AsyncArtifactCreator</RootNamespace>
+        <AssemblyName>Geext.AsyncArtifactCreator</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,7 +23,7 @@
     </ItemGroup>
     
     <ItemGroup>
-        <None Include="LICENSE" Pack="true" Visible="false" PackagePath=""/>
+        <None Include="LICENSE" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 
 </Project>
